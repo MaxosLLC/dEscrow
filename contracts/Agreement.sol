@@ -20,4 +20,24 @@ contract Agreement is Ownable {
     enum arbitrationType { Baseball, Random, Arbitrator }
 
     enum depositStatus { Requested, Cancelled, Deposited, Disputed, Settled, Closed }
+
+    function createAgreement() external onlyOwner {
+        
+    }
+
+    function setTokenAndAmount(address tokenAddress, uint256 amount) external onlyOwner {
+        
+    }
+
+    function requestDeposit(uint256 amount) external onlyOwner {
+        
+    }
+
+    function cancelDeposit(uint256 amount) external onlyOwner {
+        
+    }
+
+    function acceptDeposit(uint256 amount) external onlyOwner {
+        
+    }
 }
