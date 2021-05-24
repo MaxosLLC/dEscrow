@@ -24,14 +24,18 @@ async function main() {
 
   const currentTime = Math.round(Date.now() / 1000) + (3600 * 24 * 200);
   const Agreement = await hh.ethers.getContractFactory("Agreement");
+  const Settlement = await hh.ethers.getContractFactory("Settlement");
 
   const minAmount = BigNumber.from("5000000000000000000000000");
   const maxAmount = BigNumber.from("1000000000000000000000000000000000");
   const agreement = await Agreement.deploy();
+  const settlement = await Settlement.deploy();
 
   await agreement.deployed();
+  await settlement.deployed();
 
   console.log("agreement:", agreement.address);
+  console.log("settlement:", settlement.address);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
