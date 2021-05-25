@@ -28,7 +28,7 @@ async function main() {
 
   const minAmount = BigNumber.from("5000000000000000000000000");
   const maxAmount = BigNumber.from("1000000000000000000000000000000000");
-  const agreement = await Agreement.deploy();
+  const agreement = await Agreement.deploy(MOCKERC20, 100, 2);
   const settlement = await Settlement.deploy();
 
   await agreement.deployed();
